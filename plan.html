@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plan Your Trip - TravelEase</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">📍 TravelEase</div>
+
+    <div class="nav-links">
+
+        <a href="index.html">⌂ Home</a>
+        <a class="active" href="plan.html">🧭 Plan</a>
+        <a href="seats.html">💺 Seats</a>
+        <a href="comfort.html">⭐ Comfort</a>
+        <a href="history.html">◷ History</a>
+
+    </div>
+
+    <div class="profile">👤</div>
+
+</nav>
+
+
+<section class="page-header">
+
+    <h1>Plan Your Trip 🧭</h1>
+
+    <p>
+        Search your destination and route to find available buses.
+    </p>
+
+</section>
+
+
+<div class="search-container">
+
+    <div class="search-field">
+
+        <label>Destination Search</label>
+
+        <input
+            id="destination"
+            type="text"
+            placeholder="Where do you want to go?">
+
+    </div>
+
+
+    <div class="search-field">
+
+        <label>Route Search</label>
+
+        <input
+            id="route"
+            type="text"
+            placeholder="e.g. Periyar">
+
+    </div>
+
+
+    <button class="search-btn" onclick="searchBuses()">
+        🔍 Search
+    </button>
+
+</div>
+
+
+<section class="results">
+
+    <div class="results-title">
+
+        <h2>Available Bus Routes</h2>
+
+        <span>6 buses found</span>
+
+    </div>
+
+
+    <div id="busResults">
+
+        <div class="bus-card">
+
+            <div class="bus-name">
+
+                <h3>🚌 Tamil Nadu Express</h3>
+
+                <p>AC Sleeper • Private</p>
+
+                <div class="bus-route">
+                    📍 Periyar → Chennai
+                </div>
+
+            </div>
+
+
+            <div class="bus-info">
+
+                <div>
+                    <strong>7h 30m</strong>
+                    Duration
+                </div>
+
+                <div>
+                    <strong>₹650</strong>
+                    Fare
+                </div>
+
+                <div>
+                    <strong>Low</strong>
+                    Crowd
+                </div>
+
+            </div>
+
+
+            <div class="score">
+
+                <div class="score-circle">
+                    92
+                </div>
+
+                <p>Comfort Score</p>
+
+                <button class="view-btn"
+                    onclick="useBus('Tamil Nadu Express')">
+                    Use Bus
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="bus-card">
+
+            <div class="bus-name">
+
+                <h3>🚌 GreenLine Travels</h3>
+
+                <p>AC Seater • Private</p>
+
+                <div class="bus-route">
+                    📍 Periyar → Chennai
+                </div>
+
+            </div>
+
+
+            <div class="bus-info">
+
+                <div>
+                    <strong>8h 10m</strong>
+                    Duration
+                </div>
+
+                <div>
+                    <strong>₹520</strong>
+                    Fare
+                </div>
+
+                <div>
+                    <strong>Medium</strong>
+                    Crowd
+                </div>
+
+            </div>
+
+
+            <div class="score">
+
+                <div class="score-circle">
+                    86
+                </div>
+
+                <p>Comfort Score</p>
+
+                <button class="view-btn"
+                    onclick="useBus('GreenLine Travels')">
+                    Use Bus
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="bus-card">
+
+            <div class="bus-name">
+
+                <h3>🚌 Royal Roadways</h3>
+
+                <p>AC Sleeper • Private</p>
+
+                <div class="bus-route">
+                    📍 Periyar → Chennai
+                </div>
+
+            </div>
+
+
+            <div class="bus-info">
+
+                <div>
+                    <strong>7h 50m</strong>
+                    Duration
+                </div>
+
+                <div>
+                    <strong>₹700</strong>
+                    Fare
+                </div>
+
+                <div>
+                    <strong>Low</strong>
+                    Crowd
+                </div>
+
+            </div>
+
+
+            <div class="score">
+
+                <div class="score-circle">
+                    89
+                </div>
+
+                <p>Comfort Score</p>
+
+                <button class="view-btn"
+                    onclick="useBus('Royal Roadways')">
+                    Use Bus
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="bus-card">
+
+            <div class="bus-name">
+
+                <h3>🚌 City Rider</h3>
+
+                <p>Non-AC Seater</p>
+
+                <div class="bus-route">
+                    📍 Periyar → Chennai
+                </div>
+
+            </div>
+
+
+            <div class="bus-info">
+
+                <div>
+                    <strong>9h</strong>
+                    Duration
+                </div>
+
+                <div>
+                    <strong>₹430</strong>
+                    Fare
+                </div>
+
+                <div>
+                    <strong>High</strong>
+                    Crowd
+                </div>
+
+            </div>
+
+
+            <div class="score">
+
+                <div class="score-circle">
+                    72
+                </div>
+
+                <p>Comfort Score</p>
+
+                <button class="view-btn"
+                    onclick="useBus('City Rider')">
+                    Use Bus
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="bus-card">
+
+            <div class="bus-name">
+
+                <h3>🚌 Southern Star</h3>
+
+                <p>AC Seater</p>
+
+                <div class="bus-route">
+                    📍 Periyar → Chennai
+                </div>
+
+            </div>
+
+
+            <div class="bus-info">
+
+                <div>
+                    <strong>8h 25m</strong>
+                    Duration
+                </div>
+
+                <div>
+                    <strong>₹580</strong>
+                    Fare
+                </div>
+
+                <div>
+                    <strong>Low</strong>
+                    Crowd
+                </div>
+
+            </div>
+
+
+            <div class="score">
+
+                <div class="score-circle">
+                    88
+                </div>
+
+                <p>Comfort Score</p>
+
+                <button class="view-btn"
+                    onclick="useBus('Southern Star')">
+                    Use Bus
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="bus-card">
+
+            <div class="bus-name">
+
+                <h3>🚌 Fast Track</h3>
+
+                <p>AC Seater</p>
+
+                <div class="bus-route">
+                    📍 Periyar → Chennai
+                </div>
+
+            </div>
+
+
+            <div class="bus-info">
+
+                <div>
+                    <strong>7h 15m</strong>
+                    Duration
+                </div>
+
+                <div>
+                    <strong>₹750</strong>
+                    Fare
+                </div>
+
+                <div>
+                    <strong>Medium</strong>
+                    Crowd
+                </div>
+
+            </div>
+
+
+            <div class="score">
+
+                <div class="score-circle">
+                    90
+                </div>
+
+                <p>Comfort Score</p>
+
+                <button class="view-btn"
+                    onclick="useBus('Fast Track')">
+                    Use Bus
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

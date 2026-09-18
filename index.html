@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelEase - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">📍 TravelEase</div>
+
+    <div class="nav-links">
+        <a class="active" href="index.html">⌂ Home</a>
+        <a href="seats.html">💺 Seats</a>
+        <a href="comfort.html">⭐ Comfort</a>
+        <a href="history.html">◷ History</a>
+        <a href="chatbot.html">🤖 Chat</a>
+    </div>
+
+    <div class="profile">👤</div>
+</nav>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Hello, Traveler! 👋</h1>
+
+        <p>
+            Discover routes, check crowd levels,
+            predict arrivals and travel comfortably.
+        </p>
+
+        <div class="search-box">
+
+            <div class="search-field">
+                <label>Current Location</label>
+                <input id="homeFrom" type="text"
+                       placeholder="e.g. Periyar">
+            </div>
+
+            <div class="search-field">
+                <label>Destination</label>
+                <input id="homeTo" type="text"
+                       placeholder="e.g. Chennai">
+            </div>
+
+            <div class="search-field">
+                <label>Travel Date</label>
+                <input id="homeDate" type="date">
+            </div>
+
+            <button class="search-btn" onclick="homeSearch()">
+                🔍 Search
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="features">
+
+    <div class="feature-card" onclick="location.href='plan.html'">
+        <div class="feature-icon">🧭</div>
+        <h3>Plan Your Trip</h3>
+        <p>Search routes and find suitable buses.</p>
+    </div>
+
+
+    <div class="feature-card" onclick="location.href='seats.html'">
+        <div class="feature-icon">💺</div>
+        <h3>Seat Availability</h3>
+        <p>Find buses with available seats and lower crowd.</p>
+    </div>
+
+
+    <div class="feature-card" onclick="location.href='arrival.html'">
+        <div class="feature-icon">🕐</div>
+        <h3>AI Arrival Prediction</h3>
+        <p>Predict when your selected bus may arrive.</p>
+    </div>
+
+
+    <div class="feature-card" onclick="location.href='comfort.html'">
+        <div class="feature-icon">⭐</div>
+        <h3>Journey Comfort Score</h3>
+        <p>Compare buses using multiple travel factors.</p>
+    </div>
+
+
+    <div class="feature-card" onclick="location.href='chatbot.html'">
+        <div class="feature-icon">🤖</div>
+        <h3>TravelEase Chatbot</h3>
+        <p>Ask questions about buses and routes.</p>
+    </div>
+
+</section>
+
+
+<footer>
+    Good things happen when you explore ❤️
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
